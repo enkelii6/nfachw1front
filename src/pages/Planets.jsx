@@ -6,7 +6,7 @@ export const Planets = () => {
     console.log(planets)
     useEffect(() => {
         const fetchPlanets = async () => {
-            const PlanetsAPI = await getAPI('Planets');
+            const PlanetsAPI = await getAPI('planets');
             setPlanets(PlanetsAPI);
         };
 

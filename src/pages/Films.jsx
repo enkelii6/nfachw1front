@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import getAPI from '../network'
+import getAPI from '../network/network'
 
 export const Films = () => {
     const [films, setFilms] = useState([])

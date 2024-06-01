@@ -1,20 +1,20 @@
 import { useEffect, useState } from 'react'
-import getAPI from '../network'
+import getAPI from '../network/network'
 
-export const Planets = () => {
-    const [planets, setPlanets] = useState([])
-    console.log(planets)
+export const Starships = () => {
+    const [starships, setStarships] = useState([])
+    console.log(starships)
     useEffect(() => {
-        const fetchPlanets = async () => {
-            const PlanetsAPI = await getAPI('Planets');
-            setPlanets(PlanetsAPI);
+        const fetchstarships = async () => {
+            const starshipsAPI = await getAPI('starships');
+            setStarships(starshipsAPI);
         };
 
-        fetchPlanets();
+        fetchstarships();
     }, []);
   return (
     <div>
-        {planets.map(planet => (<div key={planet.id}>{planet.name}</div>))}
+        {starships.map(item => (<div key={item.url}>{item.name}</div>))}
     </div>
   )
 }
